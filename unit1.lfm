@@ -1,0 +1,240 @@
+object Form1: TForm1
+  Left = 398
+  Height = 743
+  Top = 116
+  Width = 1009
+  AutoSize = True
+  BorderStyle = bsSingle
+  BorderWidth = 3
+  Caption = 'Перемножение десятичных чисел с быстрыми переходами в СОК и обратно (Ионисян А.С.)'
+  ClientHeight = 743
+  ClientWidth = 1009
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  Scaled = False
+  object Label1: TLabel
+    Left = 520
+    Height = 14
+    Top = 544
+    Width = 464
+    Caption = 'Содержимое ПЗУ (остатки от деления ортогональных чисел на диапазон)'
+    ParentColor = False
+  end
+  object Label_P: TLabel
+    Left = 8
+    Height = 14
+    Top = 40
+    Width = 95
+    Caption = 'Диапазон СОК:'
+    ParentColor = False
+  end
+  object SG_ortho_sum: TStringGrid
+    Left = 128
+    Height = 145
+    Top = 392
+    Width = 488
+    DefaultColWidth = 96
+    FixedRows = 0
+    RowCount = 6
+    ScrollBars = ssNone
+    TabOrder = 0
+  end
+  object SG_ortho_read: TStringGrid
+    Left = 128
+    Height = 32
+    Top = 360
+    Width = 872
+    ColCount = 9
+    DefaultColWidth = 96
+    FixedRows = 0
+    RowCount = 1
+    ScrollBars = ssNone
+    TabOrder = 1
+  end
+  object SG_P: TStringGrid
+    Left = 128
+    Height = 32
+    Top = 8
+    Width = 872
+    ColCount = 9
+    DefaultColWidth = 96
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 1
+    ScrollBars = ssNone
+    TabOrder = 2
+  end
+  object SG_ROM_Ortho: TStringGrid
+    Left = 504
+    Height = 172
+    Top = 564
+    Width = 496
+    ColCount = 9
+    DefaultColWidth = 96
+    RowCount = 2
+    ScrollBars = ssBoth
+    TabOrder = 3
+  end
+  object Edit_res: TEdit
+    Left = 624
+    Height = 27
+    Top = 496
+    Width = 376
+    ReadOnly = True
+    TabOrder = 4
+    Text = '0'
+  end
+  object Label8: TLabel
+    Left = 626
+    Height = 14
+    Top = 480
+    Width = 178
+    Caption = 'Произведение (ответ) в ПСС:'
+    ParentColor = False
+  end
+  object BTN_P_set: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 112
+    Caption = 'Основания СОК'
+    OnClick = BTN_P_setClick
+    TabOrder = 5
+  end
+  object BTN_calc: TButton
+    Left = 848
+    Height = 26
+    Top = 457
+    Width = 112
+    Caption = 'Перемножить'
+    OnClick = BTN_calcClick
+    TabOrder = 6
+  end
+  object SG_ROM_digits: TStringGrid
+    Left = 8
+    Height = 172
+    Top = 564
+    Width = 496
+    ColCount = 9
+    DefaultColWidth = 96
+    RowCount = 2
+    ScrollBars = ssBoth
+    TabOrder = 7
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 14
+    Top = 544
+    Width = 508
+    Caption = 'Содержимое ПЗУ (остатки от деления цифр 0-9 и степеней 10 на основания СОК)'
+    ParentColor = False
+  end
+  object Edit_op1: TEdit
+    Left = 816
+    Height = 27
+    Top = 400
+    Width = 184
+    NumbersOnly = True
+    TabOrder = 8
+    Text = '0'
+  end
+  object Label9: TLabel
+    Left = 624
+    Height = 14
+    Top = 400
+    Width = 179
+    Caption = 'Первый сомножитель в ПСС:'
+    ParentColor = False
+  end
+  object Edit_op2: TEdit
+    Left = 816
+    Height = 27
+    Top = 427
+    Width = 184
+    NumbersOnly = True
+    TabOrder = 9
+    Text = '0'
+  end
+  object Label10: TLabel
+    Left = 626
+    Height = 14
+    Top = 427
+    Width = 177
+    Caption = 'Второй сомножитель в ПСС:'
+    ParentColor = False
+  end
+  object SG_RNS_mul: TStringGrid
+    Left = 128
+    Height = 96
+    Top = 256
+    Width = 872
+    ColCount = 9
+    DefaultColWidth = 96
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 4
+    ScrollBars = ssNone
+    TabOrder = 10
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 14
+    Top = 56
+    Width = 366
+    Caption = 'Промежуточные выкладки перевода первого числа в СОК'
+    ParentColor = False
+  end
+  object SG_RNS_op1: TStringGrid
+    Left = 8
+    Height = 176
+    Top = 72
+    Width = 496
+    ColCount = 9
+    DefaultColWidth = 96
+    RowCount = 2
+    ScrollBars = ssBoth
+    TabOrder = 11
+  end
+  object SG_RNS_op2: TStringGrid
+    Left = 504
+    Height = 176
+    Top = 72
+    Width = 496
+    ColCount = 9
+    DefaultColWidth = 96
+    RowCount = 2
+    ScrollBars = ssBoth
+    TabOrder = 12
+  end
+  object Label12: TLabel
+    Left = 504
+    Height = 14
+    Top = 56
+    Width = 365
+    Caption = 'Промежуточные выкладки перевода второго числа в СОК'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Height = 14
+    Top = 264
+    Width = 112
+    Caption = 'Умножение в СОК'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Height = 14
+    Top = 360
+    Width = 121
+    Caption = 'Извлечения из ПЗУ'
+    ParentColor = False
+  end
+  object Label11: TLabel
+    Left = 55
+    Height = 14
+    Top = 392
+    Width = 65
+    Caption = 'Сложения'
+    ParentColor = False
+  end
+end
